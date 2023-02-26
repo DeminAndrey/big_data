@@ -57,6 +57,10 @@ set_target_properties(${PROJECT_NAME} tests PROPERTIES
 target_include_directories(${PROJECT_NAME}
   PRIVATE "${CMAKE_BINARY_DIR}")
 
+target_include_directories(${PROJECT_NAME}
+  PRIVATE ${Boost_INCLUDE_DIR}
+)
+
 target_link_libraries(${PROJECT_NAME}
   PRIVATE
   pthread
